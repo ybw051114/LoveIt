@@ -190,12 +190,7 @@
     <script src="{{ $res.RelPermalink }}"></script>
 {{- end -}}
 
-{{- /* Theme script */ -}}
-{{- with $CDN.themeJS -}}
-    {{- slice . | $.Scratch.Add "scriptCDN" -}}
-{{- else -}}
-    {{- slice "/js/theme.min.js" | $.Scratch.Add "scriptLocal" -}}
-{{- end -}}
+<script src=/js/theme.min.js></script>
 
 {{- /* Google analytics async */ -}}
 {{- if .Scratch.Get "production" | and .Site.GoogleAnalytics -}}
